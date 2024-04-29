@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Code Marathon</title>
+    <style>
+      
+        body {
+            font-family: 'Verdana', sans-serif; 
+            text-align: center;
+            margin-top: 50px;
+        }
+      
+        #visits {
+            margin-top: 20px; /* Space for visiter counter */
+        }
+      
+    </style>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <div id="visits">Total Visits: Loading...</div>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://api.countapi.xyz/hit/khanqasim.com/index.html"); 
+        xhr.responseType = "json";
+        xhr.onload = function() {
+            document.getElementById('visits').innerText = 'Total Visits: ' + this.response.value;
+        }
+        xhr.send();
+    </script>
+</body>
+</html>
