@@ -7,9 +7,13 @@
     <style>
       
         body {
-            font-family: 'Verdana', sans-serif; 
-            text-align: center;
-            margin-top: 50px;
+            font-family: 'Verdana', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
         }
       
         #visits {
@@ -23,10 +27,10 @@
     <div id="visits">Total Visits: Loading...</div>
     <script>
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://api.countapi.xyz/hit/khanqasim.com/index.html"); 
+        xhr.open("GET", "https://api.countapi.xyz/hit/khanaroma.com/visits");
         xhr.responseType = "json";
         xhr.onload = function() {
-            document.getElementById('visits').innerText = 'Total Visits: ' + this.response.value;
+            document.getElementById('visits').innerText = this.response.value;
         }
         xhr.send();
     </script>
