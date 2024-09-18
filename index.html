@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Code Marathon</title>
     <style>
-      
         body {
             font-family: 'Verdana', sans-serif;
             display: flex;
@@ -14,36 +13,69 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
+            background-color: #f4f4f4;
         }
 
-        #linkedin-link {
-            margin-bottom: 10px;
+        #image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
         }
 
-        #linkedin-features {
-            margin-top: 10px;
+        #text-container {
+            display: none;
+            justify-content: space-between;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
         }
-        
-        #visits {
-            margin-top: 10px;
+
+        #text-left, #text-right {
+            width: 45%;
+            text-align: center;
         }
-      
+
+        #light-switch {
+            cursor: pointer;
+            max-width: 150px;
+            max-height: 300px;
+        }
+
     </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
 
-    <div id="linkedin-link">
-        <a href="https://www.linkedin.com/in/qasimkhan02" target="_blank">Qasim Khan - My LinkedIn</a>
+    <div id="image-container">
+        <img src="lightSwitchQK.png" alt="Light Switch" id="light-switch">
     </div>
 
-    <div id="linkedin-features">
-        Comment on my post what features you want to see added on this website!
+    <div id="text-container">
+        <div id="text-left">
+            <h2>Where name will be</h2>
+            <p>Buttons for About Me, Experience, Projects</p>
+        </div>
+        <div id="text-right">
+            <h2>After clicking button</h2>
+            <p>Where the actual info is displayed</p>
+        </div>
     </div>
 
-    <div id="visits">        
-        <img src="https://www.cutercounter.com/hits.php?id=hxpnfdx&nd=4&style=71" border="0" alt="hit counter"></a>
-    </div>
-    
+    <script>
+        const switchImage = document.getElementById('light-switch');
+        const textContainer = document.getElementById('text-container');
+        const imageContainer = document.getElementById('image-container');
+
+        switchImage.addEventListener('click', () => {
+            // Hiding the text until image is clicked
+            imageContainer.style.display = 'none';
+            textContainer.style.display = 'flex';
+        });
+    </script>
 </body>
 </html>
