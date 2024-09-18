@@ -13,7 +13,8 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            background-color: #f4f4f4;
+            background-color: black;
+            transition: background-color 0.3s ease; /* for background change */
         }
 
         #image-container {
@@ -69,12 +70,17 @@
     <script>
         const switchImage = document.getElementById('light-switch');
         const textContainer = document.getElementById('text-container');
-        const imageContainer = document.getElementById('image-container');
+        const bodyElement = document.body;
+
+        let isLightOn = false;
 
         switchImage.addEventListener('click', () => {
-            // Hiding the text until image is clicked
-            imageContainer.style.display = 'none';
-            textContainer.style.display = 'flex';
+            // Toggle the background color
+            isLightOn = !isLightOn;
+            bodyElement.style.backgroundColor = isLightOn ? 'white' : 'black';
+
+            // Show the text when light is on
+            textContainer.style.display = isLightOn ? 'flex' : 'none';
         });
     </script>
 </body>
