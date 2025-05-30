@@ -1,178 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
-  <link rel="stylesheet" href="style.css" />
-  <title>SDET | My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Qasim Khan | Portfolio</title>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K9XKR2JM5N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K9XKR2JM5N');
+  </script>
 </head>
-
 <body>
-  <header class="header">
-    <h2 class="visually-hidden">Header</h2>
-    <div class="wrapper">
-      <nav class="header__nav">
-        <h2 class="visually-hidden">Navigation</h2>
-        <a href="/" class="header__home">
-          qasimkhan
-          <span class="visually-hidden">(to home page)</span>
-        </a>
-        <a href="https://www.linkedin.com/in/qasimkhan02" class="header__social">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" aria-labelledby="socialLinkedIn" role="img">
-            <title id="socialLinkedIn">LinkedIn</title>
-            <path fill="#FFF" fill-rule="evenodd" d="M5.551 3.304c-1.14 0-2.067.926-2.067 2.064 0 1.14.928 2.066 2.067 2.066a2.066 2.066 0 0 0 0-4.13ZM3.767 8.998v11.453h3.562L7.33 8.998H3.767Zm5.798 0V20.45l3.554.002.002-5.668c0-1.454.253-2.941 2.132-2.941 1.851 0 1.851 1.755 1.851 3.036v5.571l3.559-.001v-6.28c0-2.834-.517-5.457-4.27-5.457-1.763 0-2.916.997-3.368 1.85h-.05V8.997h-3.41ZM22.435 24H1.982c-.976 0-1.77-.777-1.77-1.732V1.731C.212.776 1.006 0 1.982 0h20.453c.98 0 1.777.776 1.777 1.73v20.538c0 .955-.797 1.732-1.777 1.732Z" />
-          </svg>
-        </a>
-      </nav>
-    </div>
-  </header>
 
-  <main id="main">
-    <section class="hero">
-      <div class="wrapper hero__wrapper bottom-border">
-        <div class="hero__content">
-          <div class="hero__text">
-            <h1 class="hero__headline header-xl">
-              Nice to<br />
-              meet you! I'm <span>Qasim Khan</span>.
-            </h1>
-            <p class="hero__description">
-              Welcome! This is a website I created to give you a glimpse into my projects, skills,
-              and interests. Explore the different sections to learn more about what I’ve been working on and the journey I’m on.
-            </p>
-            <a href="#contact" class="hero__contact underline">Request Resume</a>
-          </div>
-        </div>
+  <div class="scroll-container">
+    <!-- hero -->
+    <section class="section section-intro">
+      <div class="content hero">
+        <p class="intro-tag">Hi, my name is</p>
+        <h1>Qasim Khan</h1>
+        <h2>Software Engineer &amp; Brand Strategist</h2>
+        <p>A front-end developer who builds fast, accessible websites and helps brands grow online. I’ve designed and launched eCommerce platforms, run marketing campaigns, and supported clients through agency work.</p>
+        <button onclick="document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' })">
+          View Projects
+        </button>
       </div>
     </section>
 
-    <section class="skills">
-      <div class="wrapper skills__wrapper bottom-border">
-        <h2 class="visually-hidden">Skills</h2>
+    <!-- about me -->
+    <section class="section section-about">
+      <div class="content">
+        <h1>About Me</h1>
+        <p>I'm a software engineer with a focus on front-end development and automation. Over the past few years, I’ve built and maintained websites for consumer brands, worked with agencies on various projects, and led marketing efforts that directly contributed to business growth.</p>
+        <p>My skill set includes JavaScript, React, and Next.js, along with experience using testing tools like Selenium and Postman.</p>
+        <p>One of my most recent projects involved helping an eCommerce brand reach $45.9K in monthly sales — a 785% increase compared to the same period last year. That growth included a 1,000%+ rise in units sold and over 38K monthly page views, proving how smart design and development can drive real results.</p>
 
-        <div class="skills__item">
-          <h3 class="skills__title">Java</h3>
-          <p class="skills__description">3 Years Experience</p>
+        <h3>Skills</h3>
+        <div class="skills-pill-container">
+          <span class="pill">JavaScript</span>
+          <span class="pill">React</span>
+          <span class="pill">Next.js</span>
+          <span class="pill">HTML</span>
+          <span class="pill">CSS</span>
+          <span class="pill">Figma</span>
+          <span class="pill">Selenium</span>
+          <span class="pill">Cypress</span>
+          <span class="pill">Postman</span>
+          <span class="pill">SQL</span>
+          <span class="pill">REST APIs</span>
+          <span class="pill">Git</span>
+          <span class="pill">Jira</span>
         </div>
-        <div class="skills__item">
-          <h3 class="skills__title">Selenium</h3>
-          <p class="skills__description">3 Years Experience</p>
-        </div>
-        <div class="skills__item">
-          <h3 class="skills__title">Jira</h3>
-          <p class="skills__description">2 Years Experience</p>
-        </div>
-        <div class="skills__item">
-          <h3 class="skills__title">API Testing</h3>
-          <p class="skills__description">2 Years Experience</p>
-        </div>
-        <div class="skills__item">
-          <h3 class="skills__title">HTML</h3>
-          <p class="skills__description">2 Years Experience</p>
-        </div>
-        <div class="skills__item">
-          <h3 class="skills__title">CSS</h3>
-          <p class="skills__description">1 Year Experience</p>
-        </div>
+
+        <button class="contact-btn" onclick="document.querySelector('.section-contact').scrollIntoView({ behavior: 'smooth' })">
+          Contact Me
+        </button>
       </div>
     </section>
 
-    <section class="projects">
-      <div class="wrapper projects__wrapper">
-        <div class="projects__grid">
-          <h2 class="projects__headline header-xl">Projects</h2>
-          <a href="#contact" class="projects__contact underline">Contact me</a>
+    <!-- projects -->
+    <section class="section section-projects" id="projects">
+      <div class="content">
+        <h1>Projects</h1>
 
-          <!-- First project -->
-          <div class="projects__item">
-            <h3 class="projects__name">Marketplace Product Profiler</h3>
-            <p class="projects__tags">
-              <span>Selenium</span>
-              <span>Java</span>
-              <span>TestNG</span>
+        <!-- featured pts -->
+        <div class="featured-projects">
+          <div class="project-card">
+            <h3>Marketplace Product Profiler</h3>
+            <p class="stack">Java · Selenium · MySQL</p>
+            <p class="desc">
+              Powerful tool used by 500+ users weekly to uncover profitable products. It retrieves listing and sales frequency data across multiple marketplaces, detects unusual item behavior, and helps you find trending keywords fast.
             </p>
-            <p class="projects__description">
-              I built an automated testing framework using Selenium, Java, TestNG, and MySQL to scrape and validate product information from e-commerce marketplaces.
-              The project included end-to-end data validation for product titles, SKUs, and prices, ensuring accuracy by cross-referencing a MySQL database.
-              This project showcases my skills in automating web scraping and integrating SQL for database testing.
-            </p>
+            <img src="images/productProfiler.png"
+                 alt="Marketplace Product Profiler screenshot"
+                 class="project-img" />
           </div>
 
-          <!-- Second project -->
-          <div class="projects__item">
-            <h3 class="projects__name">Stock Profiler</h3>
-            <p class="projects__tags">
-              <span>Selenium</span>
-              <span>Java</span>
-              <span>Postman</span>
+          <div class="project-card">
+            <h3>S&amp;P Tool</h3>
+            <p class="stack">Java · REST APIs · MySQL</p>
+            <p class="desc">
+              A real-time dashboard for tracking the S&amp;P 500 and its constituent companies. Users can monitor option greeks, volatility, and market movement across all SPY500 stocks with live data updates.
             </p>
-            <p class="projects__description">
-              I developed an automated testing suite using Java, Postman, and Cucumber to simulate testing stock market data from different APIs.
-              I created user-friendly test cases based on behavior-driven development (BDD) to ensure data accuracy and learned how to automate workflows and manage testing results.
-              This project gave me practical experience in API testing, automation, and using tools like JIRA for tracking.
-            </p>
+            <img src="images/s&amp;pProject.png"
+                 alt="Stock Profiler screenshot"
+                 class="project-img" />
           </div>
 
+          <div class="project-card">
+            <h3>TapInBeauty <small>(incomplete)</small></h3>
+            <p class="stack">React · Firebase · Stripe</p>
+            <p class="desc">
+              A beauty marketplace built to compete with top distributors in the industry. Enables verified buyers to browse, filter, and purchase high-demand SKUs from trusted suppliers. Features real-time inventory sync, B2B checkout, and seller onboarding workflows.
+            </p>
+            <img src="images/tapinbeauty.png"
+                 alt="TapInBeauty screenshot"
+                 class="project-img" />
+          </div>
         </div>
-      </div>
-    </section>
 
-    <section id="contact" class="contact bg-less-dark">
-      <div class="wrapper contact__wrapper bottom-border">
-        <div class="contact__text">
-          <h2 class="contact__headline header-xl">Contact</h2>
-          <p class="contact__description">
-            Want to connect? Shoot me a message!
-            Let's discuss anything from cars to projects we are working on.
+        <!-- other projs -->
+        <div class="more-projects">
+          <h2>Other Projects</h2>
+          <p class="other-projects-text">
+            Outside of these featured projects, I’m currently building Guzar Go, a mobile app developed in React Native with Firebase that rewards users for real-world travel check-ins. It’s an ongoing project that’s helping me dive deeper into mobile development, location services, and building smooth user experiences across platforms.
           </p>
         </div>
-        <form action="" class="contact__form">
-          <div class="contact__control">
-          </div>
-          <div class="contact__control align-right">
-            <a href="https://www.linkedin.com/in/qasimkhan02" target="_blank" rel="noopener noreferrer">
-              <button type="button">View LinkedIn</button>
-            </a>
-          </div>
-        </form>
       </div>
     </section>
-  </main>
 
-  <footer class="footer bg-less-dark">
-    <h2 class="visually-hidden">Footer</h2>
-    <div class="wrapper">
-      <nav class="header__nav">
-        <h2 class="visually-hidden">Navigation</h2>
-        <a href="/" class="header__home">
-          qasimkhan
-          <span class="visually-hidden">(to home page)</span>
-        </a>
-        <a href="https://www.linkedin.com/in/qasimkhan02" class="header__social">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" aria-labelledby="socialLinkedIn" role="img">
-            <title id="socialLinkedIn">LinkedIn</title>
-            <path fill="#FFF" fill-rule="evenodd" d="M5.551 3.304c-1.14 0-2.067.926-2.067 2.064 0 1.14.928 2.066 2.067 2.066a2.066 2.066 0 0 0 0-4.13ZM3.767 8.998v11.453h3.562L7.33 8.998H3.767Zm5.798 0V20.45l3.554.002.002-5.668c0-1.454.253-2.941 2.132-2.941 1.851 0 1.851 1.755 1.851 3.036v5.571l3.559-.001v-6.28c0-2.834-.517-5.457-4.27-5.457-1.763 0-2.916.997-3.368 1.85h-.05V8.997h-3.41ZM22.435 24H1.982c-.976 0-1.77-.777-1.77-1.732V1.731C.212.776 1.006 0 1.982 0h20.453c.98 0 1.777.776 1.777 1.73v20.538c0 .955-.797 1.732-1.777 1.732Z" />
-          </svg>
-        </a>
-      </nav>
-    </div>
-  </footer>
+    <!-- contact me -->
+    <section class="section section-contact">
+      <div class="content">
+        <h1>Contact</h1>
+        <p>Have a project in mind or just want to connect? Send me a message below or find me on LinkedIn.</p>
+
+        <form class="contact-form" action="https://formspree.io/f/xrbkzgyq" method="POST">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit" class="contact-btn">Send Message</button>
+        </form>
+
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/qasimkhan02" class="contact-link" target="_blank">LinkedIn</a>
+        </div>
+
+        <p class="powered-by">Powered by Qasim</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- nav dots -->
+  <div class="scroll-nav">
+    <div class="nav-dot" data-target="0"></div>
+    <div class="nav-dot" data-target="1"></div>
+    <div class="nav-dot" data-target="2"></div>
+    <div class="nav-dot" data-target="3"></div>
+  </div>
 
   <script>
-    document.querySelectorAll('.dropdown-btn').forEach(button => {
-      button.addEventListener('click', function() {
-        const content = this.nextElementSibling;
-        // Toggle class for button and content
-        this.classList.toggle('active');
-        content.classList.toggle('active');
+    const dots = document.querySelectorAll(".nav-dot");
+    const sections = document.querySelectorAll(".section");
+
+    dots.forEach(dot => {
+      dot.addEventListener("click", () => {
+        sections[+dot.dataset.target].scrollIntoView({ behavior: 'smooth' });
       });
     });
-  </script>
-</body>
 
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          dots.forEach(d => d.classList.remove("active"));
+          dots[[...sections].indexOf(e.target)]?.classList.add("active");
+          e.target.classList.add("is-visible");
+        }
+      });
+    }, { threshold: 0.5 });
+    sections.forEach(s => obs.observe(s));
+  </script>
+
+</body>
 </html>
