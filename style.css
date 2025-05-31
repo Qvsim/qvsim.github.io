@@ -28,10 +28,10 @@
   box-sizing: border-box;
 }
 
+/* body and scroll container */
 body {
   font-family: 'Poppins', sans-serif;
 }
-
 .scroll-container {
   /* full screen snap */
   height: 100vh;
@@ -43,9 +43,9 @@ body {
   display: none;
 }
 
-/* section snap */
+/* section base and snap */
 .section {
-  scroll-snap-align: start;    
+  scroll-snap-align: start;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -61,12 +61,14 @@ body {
   transform: translateY(0);
 }
 
+/* content container */
 .content {
   max-width: 700px;
   width: 100%;
   margin: 0 auto;
 }
 
+/* hero styles */
 .section-intro {
   color: var(--bg-light);
 }
@@ -102,6 +104,7 @@ body {
   color: var(--accent);
 }
 
+/* about me */
 .section-about {
   background: #E9F7EF;
   color: var(--text-dark);
@@ -114,7 +117,7 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* skills */
+/* skills pills */
 .skills-pill-container {
   display: flex;
   flex-wrap: wrap;
@@ -134,6 +137,7 @@ body {
   background-color: #b2ebf2;
 }
 
+/* buttons */
 .contact-btn,
 .contact-form button {
   background: var(--accent);
@@ -154,6 +158,7 @@ body {
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
+/* contact section */
 .section-contact {
   background: #000;
   color: #fff;
@@ -166,7 +171,6 @@ body {
   margin-bottom: 2rem;
   opacity: 0.8;
 }
-
 .contact-form {
   display: grid;
   gap: 1rem;
@@ -197,7 +201,7 @@ body {
   border-color: var(--accent);
 }
 
-/* linkedIn btn */
+/* linkedin button */
 .section-contact .contact-links {
   margin-bottom: 2rem;
   text-align: center;
@@ -222,6 +226,7 @@ body {
   margin-top: 1rem;
 }
 
+/* projects section */
 .section-projects {
   background: #BCEBFB;
   color: var(--text-dark);
@@ -265,7 +270,7 @@ body {
   color: var(--text-dark);
 }
 
-/* project card styles */
+/* project cards */
 .project-card {
   background: #fff;
   border-radius: 12px;
@@ -285,6 +290,7 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
+/* nav dots */
 .scroll-nav {
   position: fixed;
   right: 2rem;
@@ -333,30 +339,30 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
-  /* hero text size */
+  /* hero text */
   .hero h1 {
     font-size: 3rem;
   }
   .hero h2 {
     font-size: 1.5rem;
   }
-  /* project cards padding */
+  /* project card padding */
   .featured-projects .project-card {
     padding: 2rem;
   }
-  /* nav bar height */
+  /* adjust nav height */
   .scroll-nav::before {
     height: calc((8px + 12px) * 3);
   }
 }
 
 @media (max-width: 768px) {
-  /* projects columns */
+  /* stack projects */
   .featured-projects {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  /* hero text */
+  /* shrink hero text */
   .hero h1 {
     font-size: 2.5rem;
   }
@@ -366,7 +372,7 @@ body {
   .hero p {
     font-size: 1rem;
   }
-  /* horizontal padding */
+  /* reduce horizontal padding */
   .content {
     padding: 2rem;
   }
@@ -374,7 +380,7 @@ body {
   .section {
     padding: 2rem;
   }
-  /* skills size */
+  /* shrink pills */
   .pill {
     font-size: 0.9rem;
     padding: 6px 10px;
@@ -387,17 +393,15 @@ body {
 }
 
 @media (max-width: 600px) {
-  /* nav dots mobile */
+  /* hide nav dots */
   .scroll-nav {
     display: none;
   }
-
-  /* project grid */
+  /* tighter project gaps */
   .featured-projects {
     gap: 1rem;
   }
-
-  /* hero text */
+  /* smaller hero text */
   .hero h1 {
     font-size: 2rem;
   }
@@ -407,14 +411,12 @@ body {
   .hero p {
     font-size: 0.9rem;
   }
-
-  /* about section */
+  /* about paragraph */
   .section-about p {
     font-size: 1rem;
     line-height: 1.5;
   }
-
-  /* skills distance */
+  /* tighter skills */
   .skills-pill-container {
     gap: 6px;
     justify-content: flex-start;
@@ -423,13 +425,11 @@ body {
     font-size: 0.8rem;
     padding: 5px 8px;
   }
-
-  /* contact text */
+  /* contact form text */
   .contact-form input,
   .contact-form textarea {
     font-size: 0.9rem;
   }
-
   /* project card text */
   .project-card h3 {
     font-size: 1.2rem;
@@ -441,9 +441,12 @@ body {
   .project-card .desc {
     font-size: 0.9rem;
   }
-
-  /* image overflow */
+  /* reduce project padding */
   .featured-projects .project-card {
     padding: 1.5rem;
+  }
+  /* disable snap on small phones */
+  .scroll-container {
+    scroll-snap-type: none;
   }
 }
