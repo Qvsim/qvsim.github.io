@@ -33,7 +33,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 .scroll-container {
-  /* full screen snap - only desktop */
+  /* full screen snap - only for desktop */
   height: 100vh;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
@@ -117,7 +117,7 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* skills pills */
+/* skills */
 .skills-pill-container {
   display: flex;
   flex-wrap: wrap;
@@ -228,7 +228,7 @@ body {
 
 /* projects section */
 .section-projects {
-  background: hotpink !important; /* checking if this solves why mobile doesnt load */
+  background: hotpink !important; /* issue still persists */
   color: var(--text-dark);
 }
 .section-projects .content {
@@ -337,12 +337,11 @@ body {
   .scroll-container {
     scroll-snap-type: none !important;
   }
-  /* project columns */
   .featured-projects {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
-  /* hero text */
+  /* shrink hero text */
   .hero h1 {
     font-size: 3rem;
   }
@@ -360,12 +359,11 @@ body {
 }
 
 @media (max-width: 768px) {
-  /* stack projects */
   .featured-projects {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  /* shrink hero text */
+  /* hero text */
   .hero h1 {
     font-size: 2.5rem;
   }
@@ -375,7 +373,7 @@ body {
   .hero p {
     font-size: 1rem;
   }
-  /* reduce horizontal padding */
+  /* horizontal padding */
   .content {
     padding: 2rem;
   }
@@ -388,23 +386,26 @@ body {
     font-size: 0.9rem;
     padding: 6px 10px;
   }
-  /* contact form width */
+  /* contact form full width */
   .contact-form {
     max-width: 100%;
     padding: 0 1rem;
   }
+  .section-projects {
+    min-height: auto;
+  }
 }
 
 @media (max-width: 600px) {
-  /* hide nav dots */
+  /* hide nav on phones */
   .scroll-nav {
     display: none;
   }
-  /* tighter project gaps */
+  /* project gaps */
   .featured-projects {
     gap: 1rem;
   }
-  /* smaller hero text */
+  /* small text */
   .hero h1 {
     font-size: 2rem;
   }
@@ -419,7 +420,7 @@ body {
     font-size: 1rem;
     line-height: 1.5;
   }
-  /* tighter skills */
+  /* skills distance */
   .skills-pill-container {
     gap: 6px;
     justify-content: flex-start;
@@ -428,12 +429,12 @@ body {
     font-size: 0.8rem;
     padding: 5px 8px;
   }
-  /* contact form text */
+  /* contact text */
   .contact-form input,
   .contact-form textarea {
     font-size: 0.9rem;
   }
-  /* project card text */
+  /* project card headings & desc */
   .project-card h3 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
@@ -444,11 +445,11 @@ body {
   .project-card .desc {
     font-size: 0.9rem;
   }
-  /* reduce project padding */
+  /* card padding */
   .featured-projects .project-card {
     padding: 1.5rem;
   }
-  /* permanently disable snap for phones */
+  /* snap on for phones */
   .scroll-container {
     scroll-snap-type: none !important;
   }
