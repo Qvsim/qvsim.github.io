@@ -33,7 +33,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 .scroll-container {
-  /* full screen snap */
+  /* full screen snap - only desktop */
   height: 100vh;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
@@ -228,7 +228,7 @@ body {
 
 /* projects section */
 .section-projects {
-  background: #BCEBFB;
+  background: hotpink !important; /* checking if this solves why mobile doesnt load */
   color: var(--text-dark);
 }
 .section-projects .content {
@@ -334,6 +334,9 @@ body {
 }
 
 @media (max-width: 1024px) {
+  .scroll-container {
+    scroll-snap-type: none !important;
+  }
   /* project columns */
   .featured-projects {
     grid-template-columns: repeat(2, 1fr);
@@ -350,7 +353,7 @@ body {
   .featured-projects .project-card {
     padding: 2rem;
   }
-  /* adjust nav height */
+  /* nav height */
   .scroll-nav::before {
     height: calc((8px + 12px) * 3);
   }
@@ -445,8 +448,8 @@ body {
   .featured-projects .project-card {
     padding: 1.5rem;
   }
-  /* disable snap on small phones */
+  /* permanently disable snap for phones */
   .scroll-container {
-    scroll-snap-type: none;
+    scroll-snap-type: none !important;
   }
 }
