@@ -1,77 +1,79 @@
-body {
+/* ========== Base ========== */
+* {
   margin: 0;
-  font-family: 'General Sans', sans-serif;
-  background: #0d0b1f;
-  color: #e0e0e0;
-  line-height: 1.6;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== Typography & Layout ========== */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  line-height: 1.7;
   scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Clash Display', sans-serif;
-  color: #ffd29c;
-  margin: 0 0 1rem;
+  font-family: 'Work Sans', sans-serif;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
 }
 
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.4rem;
-}
-
-h4 {
-  font-size: 1.1rem;
-}
+h1 { font-size: 2.75rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.3rem; }
+h4 { font-size: 1.1rem; }
 
 p {
   font-size: 1rem;
-  color: #a6accd;
+  color: #444;
   margin-bottom: 1.2rem;
 }
 
 a {
-  color: #ff6b81;
+  color: #004aad;
   text-decoration: none;
-  transition: 0.3s ease;
+  transition: 0.2s ease;
 }
+
 a:hover {
-  color: #f093fb;
+  color: #002f7a;
+}
+
+/* ========== Containers ========== */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 section {
-  padding: 6rem 2rem;
-  max-width: 960px;
-  margin: auto;
+  padding: 6rem 0;
 }
 
-/* Navbar */
+/* ========== Navigation ========== */
 .nav {
-  background: #0d0b1f;
-  padding: 1rem 2rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e1e5ea;
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .nav-container {
   max-width: 960px;
   margin: auto;
+  padding: 1.2rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .nav-logo {
-  font-family: 'Clash Display', sans-serif;
-  font-size: 1.5rem;
-  color: #ffd29c;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #004aad;
 }
 
 nav a {
@@ -80,46 +82,49 @@ nav a {
   font-size: 0.95rem;
 }
 
-/* Hero Section */
+/* ========== Hero Section ========== */
 .hero {
+  background-color: #ffffff;
   text-align: center;
-  padding: 8rem 2rem 6rem;
+  padding-top: 8rem;
 }
 
 .tag {
-  color: #f093fb;
+  color: #004aad;
   text-transform: uppercase;
   font-size: 0.85rem;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
+  margin-bottom: 1rem;
 }
 
 .intro {
-  color: #a6accd;
   max-width: 600px;
   margin: 1.5rem auto 2rem;
+  color: #555;
 }
 
-/* Button */
+/* ========== Button ========== */
 .btn {
-  background: rgba(255,255,255,0.08);
-  color: #ffd29c;
-  padding: 0.75rem 1.5rem;
-  border: 1px solid #ffd29c;
-  border-radius: 10px;
-  font-weight: bold;
-  transition: 0.3s ease;
   display: inline-block;
-  backdrop-filter: blur(8px);
+  background: #004aad;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .btn:hover {
-  background: rgba(255,255,255,0.15);
-  color: #f093fb;
-  border-color: #f093fb;
+  background: #002f7a;
 }
 
-/* Skills Tags */
+.btn.submit {
+  margin-top: 1rem;
+}
+
+/* ========== Skills ========== */
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -128,22 +133,21 @@ nav a {
 }
 
 .skills span {
-  background: #1b1a2e;
-  color: #ffd29c;
+  background: #f0f4f8;
+  color: #004aad;
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
   font-size: 0.85rem;
 }
 
-/* Worked With Section */
+/* ========== Worked With Section ========== */
 .worked-with {
   margin-top: 3rem;
 }
 
 .worked-with h3 {
-  font-size: 1.2rem;
-  margin-bottom: 1.2rem;
-  color: #ffd29c;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
 }
 
 .companies {
@@ -158,27 +162,30 @@ nav a {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
 .company img {
   width: 60px;
   height: auto;
-  filter: brightness(0) invert(1);
   opacity: 0.9;
   transition: transform 0.3s ease;
 }
 
 .company img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .company span {
   font-size: 0.85rem;
-  color: #a6accd;
+  color: #555;
 }
 
-/* Projects */
+/* ========== Projects Section ========== */
+.section.light {
+  background: #f9f9f9;
+}
+
 .projects {
   display: grid;
   gap: 2rem;
@@ -186,32 +193,29 @@ nav a {
 }
 
 .project-card {
-  background: #151328;
+  background: #ffffff;
+  border: 1px solid #e1e5ea;
   padding: 1.5rem;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.05);
-  box-shadow: 0 10px 30px -10px rgba(240,147,251, 0.08);
-  transition: all 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  transition: transform 0.2s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px -10px rgba(240,147,251, 0.15);
+  transform: translateY(-5px);
 }
 
 .stack {
-  font-size: 0.8rem;
-  color: #f093fb;
+  font-size: 0.85rem;
+  color: #004aad;
   margin-bottom: 0.5rem;
 }
 
-/* More Projects */
 .more-projects {
   margin-top: 3rem;
-  color: #a6accd;
 }
 
-/* Contact Form */
+/* ========== Contact ========== */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -221,39 +225,27 @@ nav a {
 
 .contact-form input,
 .contact-form textarea {
-  background: #0d0b1f;
-  border: 1px solid #2c2a42;
   padding: 0.75rem 1rem;
-  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
   font-size: 1rem;
-  color: #fff;
+  font-family: 'Inter', sans-serif;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #f093fb;
   outline: none;
+  border-color: #004aad;
 }
 
-.btn.submit {
-  background: #ff6b81;
-  border: none;
-  color: #0d0b1f;
-}
-
-.btn.submit:hover {
-  background: #f093fb;
-}
-
-/* Footer */
 .footer {
-  margin-top: 2rem;
+  margin-top: 3rem;
   text-align: center;
   font-size: 0.9rem;
-  color: #66698d;
+  color: #999;
 }
 
-/* Responsive Grid */
+/* ========== Responsive ========== */
 @media (min-width: 768px) {
   .projects {
     grid-template-columns: 1fr 1fr;
