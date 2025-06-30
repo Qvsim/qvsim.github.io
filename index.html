@@ -6,17 +6,20 @@
   <title>Qasim Khan | Portfolio</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@600&family=General+Sans:wght@400;500&display=swap" rel="stylesheet" />
-  
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Script -->
+  <script defer src="script.js"></script>
 </head>
 <body>
 
   <!-- Navigation -->
   <header class="nav">
     <div class="nav-container">
-      <div class="nav-logo">QK</div>
+      <div class="nav-logo">Qasim Khan</div>
       <nav>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
@@ -27,88 +30,97 @@
 
   <!-- Hero -->
   <section class="hero" id="home">
-    <p class="tag">Hi, I’m</p>
-    <h1>Qasim Khan</h1>
-    <h2>Software Engineer & Brand Strategist</h2>
-    <p class="intro">
-      I build fast, accessible websites and help brands grow online. From full-stack eCommerce platforms to digital strategy, I bring ideas to life.
-    </p>
-    <a class="btn" href="#projects">View Projects</a>
+    <div class="container">
+      <p class="tag">Hello, I'm</p>
+      <h1>Qasim Khan</h1>
+      <h2>Software Engineer & Brand Strategist</h2>
+      <p class="intro">
+        I help brands scale through clean code and strategic thinking. From developing eCommerce platforms to launching growth campaigns — I bring ideas to life with impact.
+      </p>
+      <a class="btn" href="#projects">View Projects</a>
+    </div>
   </section>
 
   <!-- About -->
   <section class="section" id="about">
-    <h2>About Me</h2>
-    <p>I’m a software engineer focused on front-end development and automation. I’ve built and maintained websites for consumer brands, worked with agencies, and led marketing efforts that drove real growth.</p>
-    <p>My stack includes JavaScript, React, and Next.js, plus tools like Selenium and Postman.</p>
-    <p>Recently, I helped an eCommerce brand hit $45.9K/month — up 785% from last year.</p>
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I’m a software engineer specializing in front-end development and automation. I’ve worked with agencies, scaled eCommerce platforms, and led marketing efforts that drove real growth.</p>
+      <p>My toolkit includes JavaScript, React, and Next.js, along with tools like Selenium and Postman for testing and automation.</p>
+      <p>Recently, I helped an eCommerce brand hit $45.9K/month — a 785% year-over-year increase.</p>
 
-    <div class="skills">
-      <span>JavaScript</span><span>React</span><span>Next.js</span><span>Figma</span>
-      <span>Postman</span><span>Selenium</span><span>SQL</span><span>REST APIs</span>
-    </div>
+      <div class="skills">
+        <span>JavaScript</span><span>React</span><span>Next.js</span><span>Figma</span>
+        <span>Selenium</span><span>Postman</span><span>SQL</span><span>REST APIs</span>
+      </div>
 
-    <!-- Worked With -->
-    <div class="worked-with">
-      <h3>Worked With</h3>
-      <div class="companies">
-        <div class="company">
-          <img src="images/shopify.png" alt="Shopify Logo" />
-          <span>Shopify</span>
-        </div>
-        <div class="company">
-          <img src="images/nyc.png" alt="NYC Department of Buildings Logo" />
-          <span>NYC Department of Buildings</span>
-        </div>
-        <div class="company">
-          <img src="images/tiktok.png" alt="TikTok Logo" />
-          <span>TikTok</span>
+      <div class="worked-with">
+        <h3>Worked With</h3>
+        <div class="companies">
+          <div class="company">
+            <img src="images/shopify.png" alt="Shopify Logo" />
+            <span>Shopify</span>
+          </div>
+          <div class="company">
+            <img src="images/nyc.png" alt="NYC Department of Buildings Logo" />
+            <span>NYC Dept. of Buildings</span>
+          </div>
+          <div class="company">
+            <img src="images/tiktok.png" alt="TikTok Logo" />
+            <span>TikTok</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Projects -->
-  <section class="section" id="projects">
-    <h2>Projects</h2>
+  <section class="section light" id="projects">
+    <div class="container">
+      <h2>Projects</h2>
 
-    <div class="projects">
-      <div class="project-card">
-        <h3>Marketplace Product Profiler</h3>
-        <p class="stack">Java · Selenium · MySQL</p>
-        <p>Tool used by 500+ users weekly to find profitable products across marketplaces. Tracks trends, listings, and behaviors.</p>
+      <div class="projects">
+        <div class="project-card">
+          <h3>Marketplace Product Profiler</h3>
+          <p class="stack">Java · Selenium · MySQL</p>
+          <p>Used by 500+ users weekly to discover profitable product listings across multiple marketplaces. Includes keyword tracking and behavioral insights.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>S&P Tool</h3>
+          <p class="stack">Java · REST APIs · MySQL</p>
+          <p>Live dashboard for monitoring the S&P 500 index and its companies. Displays option greeks, volatility, and real-time movements.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>TapInBeauty</h3>
+          <p class="stack">React · Firebase · Stripe</p>
+          <p>A B2B beauty marketplace with real-time inventory, secure checkout, and onboarding for verified sellers.</p>
+        </div>
       </div>
 
-      <div class="project-card">
-        <h3>S&P Tool</h3>
-        <p class="stack">Java · REST APIs · MySQL</p>
-        <p>Live dashboard for tracking the S&P 500. Displays option greeks, volatility, and price action across SPY500 stocks.</p>
+      <div class="more-projects">
+        <h4>Other Projects</h4>
+        <p>Currently building Guzar Go — a React Native app that rewards users for real-world travel check-ins using Firebase.</p>
       </div>
-
-      <div class="project-card">
-        <h3>TapInBeauty</h3>
-        <p class="stack">React · Firebase · Stripe</p>
-        <p>B2B beauty marketplace with real-time inventory, verified sellers, and Stripe-powered checkout flows.</p>
-      </div>
-    </div>
-
-    <div class="more-projects">
-      <h4>Other Projects</h4>
-      <p>Currently building Guzar Go — a React Native app that rewards users for real-world travel check-ins using Firebase.</p>
     </div>
   </section>
 
   <!-- Contact -->
   <section class="section" id="contact">
-    <h2>Contact</h2>
-    <p>Want to work together? Reach out and let’s connect.</p>
-    <form action="https://formspree.io/f/xrbkzgyq" method="POST" class="contact-form">
-      <input type="text" name="name" placeholder="Your name" required />
-      <input type="email" name="email" placeholder="Your email" required />
-      <textarea name="message" rows="5" placeholder="Your message" required></textarea>
-      <button type="submit" class="btn submit">Send</button>
-    </form>
-    <p class="footer">© 2025 Qasim Khan</p>
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Want to collaborate? Reach out and let’s build something together.</p>
+
+      <form action="https://formspree.io/f/xrbkzgyq" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
+        <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+        <button type="submit" class="btn submit">Send</button>
+      </form>
+
+      <p class="footer">© 2025 Qasim Khan</p>
+    </div>
   </section>
 
 </body>
