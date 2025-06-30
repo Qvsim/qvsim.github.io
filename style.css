@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 
-/* ========== Typography & Layout ========== */
 body {
   font-family: 'Inter', sans-serif;
   background-color: #ffffff;
@@ -41,7 +40,7 @@ a:hover {
   color: #002f7a;
 }
 
-/* ========== Containers ========== */
+/* ========== Layout ========== */
 .container {
   max-width: 960px;
   margin: 0 auto;
@@ -124,7 +123,7 @@ nav a {
   margin-top: 1rem;
 }
 
-/* ========== Skills ========== */
+/* ========== Skills Tags ========== */
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -140,7 +139,7 @@ nav a {
   font-size: 0.85rem;
 }
 
-/* ========== Worked With Section ========== */
+/* ========== Worked With ========== */
 .worked-with {
   margin-top: 3rem;
 }
@@ -197,12 +196,22 @@ nav a {
   border: 1px solid #e1e5ea;
   padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
   transition: transform 0.2s ease;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  max-height: 240px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background: #f0f0f0;
+  padding: 0.5rem;
 }
 
 .stack {
@@ -215,7 +224,7 @@ nav a {
   margin-top: 3rem;
 }
 
-/* ========== Contact ========== */
+/* ========== Contact Form ========== */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -245,7 +254,7 @@ nav a {
   color: #999;
 }
 
-/* ========== Responsive ========== */
+/* ========== Responsive Layout ========== */
 @media (min-width: 768px) {
   .projects {
     grid-template-columns: 1fr 1fr;
